@@ -4,11 +4,11 @@ var schema = mongoose.Schema;
 var assignmentSchema = new schema({
     number: {
         type: Number,
-        required: true,
+        required: true
     },
     name: {
         type: String,
-        required: true,
+        required: true
     },
     questions: [{
         type: String
@@ -16,6 +16,10 @@ var assignmentSchema = new schema({
     class: {
         type: schema.Types.ObjectId,
         ref: 'Class'
+    },
+    marks: {
+        type: Number,
+        resuired: true
     }
 });
 module.exports = mongoose.model('Assignment', assignmentSchema);
