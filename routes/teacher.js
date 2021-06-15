@@ -3,7 +3,7 @@ var router = express.Router();
 var Assignment =  require('../models/assignment');
 const cors = require('./cors');
 
-router.get('/assignments', cors.cors, (req, res, next) => {
+router.get('/assignments',cors.cors, (req, res, next) => {
   Assignment.find({}).populate('class').sort('number').exec((error,result) => {
     if(error) {
       return next(error);
