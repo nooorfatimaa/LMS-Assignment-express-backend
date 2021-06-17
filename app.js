@@ -13,7 +13,7 @@ var headRouter = require('./routes/head');
 var studentRouter = require('./routes/student');
 var teacherRouter = require('./routes/teacher');
 
-mongoose.connect('mongodb+srv://noooor:noor12345@cluster0.euyw8.mongodb.net/lmsDatabase?retryWrites=true&w=majority',{ useNewUrlParser: true },() =>{console.log("connected")});
+mongoose.connect('mongodb+srv://noooor:*********@cluster0.euyw8.mongodb.net/lmsDatabase?retryWrites=true&w=majority',{ useNewUrlParser: true },() =>{console.log("connected")});
 
 var app = express();
 // view engine setup
