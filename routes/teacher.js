@@ -31,7 +31,7 @@ router.delete('/deleteassignment/:aid', cors.cors, (req, res, next) => {
   });
 });
 
-router.put('/updateassignment/:aid', function(req, res, next) {
+router.put('/updateassignment/:aid', cors.cors, (req, res, next) => {
   Assignment.findOneAndUpdate({_id: req.params.aid},{
     "$push" :{
       "questions" : req.body 
